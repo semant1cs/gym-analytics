@@ -19,18 +19,6 @@
             @update:model-value="errors['login'] = ''"
           />
 
-          <q-input
-            v-model="password"
-            label="Пароль"
-            hint="Введите пароль"
-            color="panel-primary"
-            type="password"
-            filled
-            :error-message="errors['password']"
-            :error="!!errors['password']"
-            @update:model-value="errors['password'] = ''"
-          />
-
           <div>
             <q-btn
               label="Продолжить"
@@ -69,7 +57,6 @@ const { notify } = useQuasar()
 const router = useRouter()
 
 const login = ref('')
-const password = ref('')
 
 const errors = reactive({
   login: '',
@@ -79,7 +66,6 @@ const componentLoading = ref(false)
 
 const onReset = () => {
   login.value = ''
-  password.value = ''
 }
 
 const onSubmit = async () => {

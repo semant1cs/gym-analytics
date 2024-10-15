@@ -1,0 +1,80 @@
+.panel-title {
+  font-size: 20px;
+  letter-spacing: 0.005em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.block-subtitle {
+  font-size: 18px;
+  letter-spacing: 0.005em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.page-block {
+  background-color: #d6d6d614;
+  .block-subtitle {
+    font-size: 16px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.q-editor__content {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+  h5, h6 {
+    font-size: 1.4rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: normal;
+    margin: 0px 0px 16px 0px;
+  }
+}
+
+.q-page-container {
+  transition: all 0.3s linear 0s;
+}
+
+.component-separator {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.q-uploader {
+  .q-uploader__header {
+    .q-uploader__subtitle {
+      display: none;
+    }
+  }
+  .q-uploader__list {
+    .q-uploader__subtitle {
+      display: none;
+    }
+  }
+}
+
+.text-brand {
+  color: #a2aa33 !important;
+}
+.bg-brand {
+  background: #a2aa33 !important;
+}
