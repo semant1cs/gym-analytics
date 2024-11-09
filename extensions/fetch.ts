@@ -1,5 +1,5 @@
 export const apiFetch = async (request: any, opts?: unknown) => {
-  const baseURL = process.server ? (process.env.API_URL || 'http://localhost:3000/') : '/'
+  const baseURL = "http://51.250.45.111:8083"
   const fetch = $fetch.create({
     baseURL
   })
