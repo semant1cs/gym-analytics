@@ -42,7 +42,8 @@
               label="Название видео"
               filled
             />
-            <q-uploader 
+            <q-uploader
+              url="https://localhost:8083/api/v1/videos"
               :headers="[{name: 'token', value: `Bearer ${bearerToken}` }]"
              />
             <q-btn
