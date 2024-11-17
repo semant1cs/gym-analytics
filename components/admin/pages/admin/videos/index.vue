@@ -42,7 +42,9 @@
               label="Название видео"
               filled
             />
-            <q-uploader />
+            <q-uploader 
+              :headers="[{name: 'token', value: `Bearer ${bearerToken}` }]"
+             />
             <q-btn
               label="Сохранить"
               filled
@@ -128,6 +130,7 @@ import { apiFetch } from '~/extensions/fetch'
 import { useQuasar } from 'quasar';
 
 const router = useRouter()
+const bearerToken = localStorage.getItem('token')
 const { notify } = useQuasar()
 const selected = ref([])
 const videoName = ref('')
