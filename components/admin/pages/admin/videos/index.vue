@@ -15,7 +15,6 @@
       :columns="columns"
       :rows-per-page-options="[10]"
       :loading="componentLoading"
-      @row-click="rowClick"
     >
       <template
         #top-right
@@ -184,10 +183,6 @@ const columns: any = [
 ]
 
 const componentLoading = ref(false)
-
-const rowClick = (_evt: any, row: any) => {
-  router.push(`/admin/employee/${row.pageId}`)
-}
 
 const deleteDialog = ref(false)
 

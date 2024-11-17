@@ -166,24 +166,24 @@ const logout = async () => {
   })
   router.push('/admin/login')
 
-  // await apiFetch('/api/user/logout', { method: 'delete' })
-  //   .then((result: any) => {
-  //     notify({
-  //       color: 'positive',
-  //       textColor: 'white',
-  //       icon: 'done',
-  //       message: result.message || 'Готово'
-  //     })
-  //     router.push('/admin/login')
-  //   })
-  //   .catch((err: { message: any }) => {
-  //     notify({
-  //       color: 'negative',
-  //       textColor: 'white',
-  //       icon: 'warning',
-  //       message: err.message || 'Упс, произошла ошибка'
-  //     })
-  //   })
+  await apiFetch('/api/v1/logout', { method: 'delete' })
+    .then((result: any) => {
+      notify({
+        color: 'positive',
+        textColor: 'white',
+        icon: 'done',
+        message: result.message || 'Готово'
+      })
+      router.push('/admin/login')
+    })
+    .catch((err: { message: any }) => {
+      notify({
+        color: 'negative',
+        textColor: 'white',
+        icon: 'warning',
+        message: err.message || 'Упс, произошла ошибка'
+      })
+    })
 
   componentLoading.value = false
 }

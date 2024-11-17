@@ -40,13 +40,6 @@ export const initPanelModel = () => {
           icon: 'mdi-account-hard-hat-outline',
           link: '/admin/stats/videos',
           accessRights: [1]
-        },
-        {
-          title: 'Пользователи',
-          caption: 'Статистика по пользователям и их активности',
-          icon: 'mdi-account-hard-hat-outline',
-          link: '/admin/stats/users',
-          accessRights: [1]
         }
       ]
     },

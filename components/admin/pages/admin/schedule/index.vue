@@ -14,7 +14,6 @@
       :rows="data"
       :columns="columns"
       :rows-per-page-options="[10]"
-      @row-click="rowClick"
     >
       <template
         #top-right
@@ -111,10 +110,6 @@ const data = ref()
 await $fetch(url, {
   method: "GET"
 }).then((res) => data.value = res)
-
-const rowClick = (_evt: any, row: any) => {
-  router.push(`/admin/schedule/${row.ID}`)
-}
 </script>
 <style>
 
