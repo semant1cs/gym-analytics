@@ -4,7 +4,7 @@
       v-model:selected="selected"
       flat
       bordered
-      title="Сотрудники"
+      title="Расписание"
       row-key="pageId"
       hide-pagination
       no-data-label="Данные отсутствуют"

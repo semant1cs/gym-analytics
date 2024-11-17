@@ -13,18 +13,6 @@ export const initPanelModel = () => {
       ]
     },
     {
-      label: 'Пользователи',
-      items: [
-        {
-          title: 'Сотрудники',
-          caption: 'Отредактируйте/создайте сотрудника для компонентов: слово сотрудника, коллектив',
-          icon: 'mdi-account-hard-hat-outline',
-          link: '/admin/employees/',
-          accessRights: [1]
-        }
-      ]
-    },
-    {
       label: 'Наполнение',
       items: [
         {
