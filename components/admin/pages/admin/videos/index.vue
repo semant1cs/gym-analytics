@@ -150,7 +150,7 @@ const data = ref({
     },
     {
       pageId: 2,
-      name: 'Видео 2',
+      name: 'Видeо 2',
       createdAt: '11-12-2024',
       updatedAt: '11-12-2024'
     }
