@@ -73,7 +73,7 @@
                   clickable
                   @click="deleteDialog = true"
               >
-                <q-item-section>Удалить</q-item-section>
+                <q-item-section>Удaлить</q-item-section>
               </q-item>
             </q-list>
           </q-menu>
