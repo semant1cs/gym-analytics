@@ -26,7 +26,7 @@
         <q-item-label
           header
         >
-          Essential Links
+          Панель управления
         </q-item-label>
 
         <EssentialLink
@@ -49,47 +49,29 @@ import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink
 
 const linksList: EssentialLinkProps[] = [
   {
-    title: 'Главная',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Панель',
+    caption: 'Главная страница',
+    icon: 'home',
+    link: '/admin/',
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
+    title: 'Видео',
+    caption: 'Добавьте видео для сотрудников',
+    icon: 'menu_book',
+    link: '/admin/videos/',
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    title: 'Расписание',
+    caption: 'Создайте/отредактируйте расписание по которому сотрудники будут выполнять гимнастику',
+    icon: 'turned_in',
+    link: '/admin/schedule/',
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    title: 'Статистика по видео',
+    caption: 'Статистика по просмотренным видео',
+    icon: 'trending_up',
+    link: '/admin/stats/videos',
   },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
 ];
 
 const leftDrawerOpen = ref(false);
