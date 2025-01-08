@@ -182,7 +182,7 @@ const columns: any = [
     sortable: false
   },
   {
-    name: 'Дата редактирования',
+    name: 'Дaта редактирования',
     align: 'center',
     label: 'Дата редактирования',
     field: (row: any) => viewDate(row.updatedAt),
