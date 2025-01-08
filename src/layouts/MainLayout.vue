@@ -21,6 +21,7 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
+      style="background-color: #161E43;"
     >
       <q-list>
         <q-item-label
@@ -49,7 +50,7 @@ import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink
 
 const linksList: EssentialLinkProps[] = [
   {
-    title: 'Главная',
+    title: '',
     caption: 'quasar.dev',
     icon: 'school',
     link: 'https://quasar.dev'
@@ -98,3 +99,8 @@ function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
+<style>
+.q-drawer--left {
+  border-right: none !important;
+}
+</style>
