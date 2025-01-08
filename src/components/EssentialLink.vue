@@ -9,12 +9,20 @@
       v-if="icon"
       avatar
     >
-      <q-icon :name="icon" />
+      <q-icon
+        :name="icon"
+        class="essential-link__text"
+      />
     </q-item-section>
 
-    <q-item-section>
+    <q-item-section class="essential-link__text">
       <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
+      <q-item-label
+        caption
+        class="essential-link__text"
+      >
+        {{ caption }}
+      </q-item-label>
     </q-item-section>
   </q-item>
 </template>
@@ -33,3 +41,9 @@ withDefaults(defineProps<EssentialLinkProps>(), {
   icon: '',
 });
 </script>
+
+<style>
+  .essential-link__text {
+    color: #b8bcc2;
+  }
+</style>
