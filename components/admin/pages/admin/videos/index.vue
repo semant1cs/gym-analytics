@@ -117,7 +117,7 @@
           <q-btn
               v-close-popup
               flat
-              label="Удалить"
+              label="Удaлить"
               color="negative"
               @click="doDelete"
           />
