@@ -21,6 +21,7 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
+      style="background-color: #161E43;"
     >
       <q-list>
         <q-item-label
@@ -80,3 +81,8 @@ function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
+<style>
+.q-drawer--left {
+  border-right: none !important;
+}
+</style>
