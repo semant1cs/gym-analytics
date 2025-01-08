@@ -26,6 +26,8 @@
       <q-list>
         <q-item-label
           header
+          class="q-toolbar__title"
+          style="color: white; padding: 16px"
         >
           Панель управления
         </q-item-label>
@@ -63,7 +65,7 @@ const linksList: EssentialLinkProps[] = [
   },
   {
     title: 'Расписание',
-    caption: 'Создайте/отредактируйте расписание по которому сотрудники будут выполнять гимнастику',
+    caption: 'Создайте / отредактируйте расписание по которому сотрудники будут выполнять гимнастику',
     icon: 'turned_in',
     link: '/admin/schedule/',
   },
