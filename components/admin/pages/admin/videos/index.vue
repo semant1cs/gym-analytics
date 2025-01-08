@@ -50,7 +50,7 @@
                 label="Выберите видeo"
             />
             <q-btn
-                label="Сохранить"
+                label="Сохрaнить"
                 filled
                 color="primary"
                 class="tw-self-end"
