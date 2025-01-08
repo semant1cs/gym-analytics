@@ -39,7 +39,7 @@
           <q-card class="q-pa-md tw-flex tw-flex-col tw-gap-4 tw-justify-start tw-items-start">
             <q-input
                 v-model="videoName"
-                label="Название видео"
+                label="Название видeo"
                 filled
             />
             <q-uploader
