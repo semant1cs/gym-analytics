@@ -47,7 +47,7 @@
                 :disable="!videoFile"
                 @added="handleFileChange"
                 ref="uploader"
-                label="Выберите видео"
+                label="Выберите видeo"
             />
             <q-btn
                 label="Сохранить"
