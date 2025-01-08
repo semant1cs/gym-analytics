@@ -1,7 +1,7 @@
 <template>
   <q-layout class="empty-panel-layout">
     <q-page-container>
-      <slot />
+      <slot/>
     </q-page-container>
   </q-layout>
 </template>

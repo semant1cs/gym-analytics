@@ -1,51 +1,51 @@
 <template>
   <div>
     <q-table
-      v-model:selected="selected"
-      flat
-      bordered
-      title="Расписание"
-      row-key="pageId"
-      hide-pagination
-      no-data-label="Данные отсутствуют"
-      loading-label="Загрузка..."
-      selection="multiple"
-      :selected-rows-label="(numberOfRows: number) => `Выбрано ${numberOfRows} шт.`"
-      :rows="data"
-      :columns="columns"
-      :rows-per-page-options="[10]"
+        v-model:selected="selected"
+        flat
+        bordered
+        title="Расписание"
+        row-key="pageId"
+        hide-pagination
+        no-data-label="Данные отсутствуют"
+        loading-label="Загрузка..."
+        selection="multiple"
+        :selected-rows-label="(numberOfRows: number) => `Выбрано ${numberOfRows} шт.`"
+        :rows="data"
+        :columns="columns"
+        :rows-per-page-options="[10]"
     >
       <template
-        #top-right
+          #top-right
       >
         <q-input
-          v-model.trim="filterData.search"
-          class="mr-6 gt-sm filter-input"
-          dense
-          outlined
-          label="Поиск"
-          color="panel-primary"
+            v-model.trim="filterData.search"
+            class="mr-6 gt-sm filter-input"
+            dense
+            outlined
+            label="Поиск"
+            color="panel-primary"
         />
 
         <q-btn
-          class="mr-4"
-          round
-          flat
-          icon="add"
-          @click="router.push('/admin/schedule/create')"
+            class="mr-4"
+            round
+            flat
+            icon="add"
+            @click="router.push('/admin/schedule/create')"
         />
 
         <q-btn
-          round
-          flat
-          icon="more_vert"
+            round
+            flat
+            icon="more_vert"
         >
           <q-menu>
             <q-list style="min-width: 135px">
               <q-item
-                v-close-popup
-                clickable
-                @click="deleteDialog = true"
+                  v-close-popup
+                  clickable
+                  @click="deleteDialog = true"
               >
                 <q-item-section>Удалить</q-item-section>
               </q-item>
@@ -58,7 +58,7 @@
 </template>
 
 <script lang="ts" setup>
-import { viewDate } from '~/components/admin/shared/libs/helpers'
+import {viewDate} from '~/components/admin/shared/libs/helpers'
 
 const router = useRouter()
 definePageMeta({

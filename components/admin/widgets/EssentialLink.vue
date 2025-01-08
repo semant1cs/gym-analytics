@@ -1,17 +1,17 @@
 <template>
   <q-item
-    clickable
-    tag="a"
-    active-class="q-item-no-link-highlighting"
-    :class="{ 'highlighting-is-on': route.meta.tag == props.tag }"
-    :to="props.link"
-    @click="sendEmit"
+      clickable
+      tag="a"
+      active-class="q-item-no-link-highlighting"
+      :class="{ 'highlighting-is-on': route.meta.tag == props.tag }"
+      :to="props.link"
+      @click="sendEmit"
   >
     <q-item-section
-      v-if="props.icon"
-      avatar
+        v-if="props.icon"
+        avatar
     >
-      <q-icon :name="props.icon" />
+      <q-icon :name="props.icon"/>
     </q-item-section>
 
     <q-item-section>
