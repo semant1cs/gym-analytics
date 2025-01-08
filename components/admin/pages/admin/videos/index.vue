@@ -144,7 +144,7 @@ const data = ref({
   rows: [
     {
       pageId: 1,
-      name: 'Видео 1',
+      name: 'Видeо 1',
       createdAt: '11-12-2024',
       updatedAt: '11-12-2024'
     },
