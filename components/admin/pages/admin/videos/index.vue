@@ -168,7 +168,7 @@ const columns: any = [
     sortable: true
   },
   {
-    name: 'Название',
+    name: 'Нaзвание',
     align: 'center',
     label: 'Название',
     field: 'name',
