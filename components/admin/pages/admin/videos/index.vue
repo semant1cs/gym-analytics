@@ -99,7 +99,7 @@
       <q-card>
         <q-card-section>
           <div class="text-h6">
-            Вы уверены?
+            Вы увeрены?
           </div>
         </q-card-section>
 
