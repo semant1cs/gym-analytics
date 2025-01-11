@@ -15,8 +15,10 @@
       />
     </q-item-section>
 
-    <q-item-section class="essential-link__text">
-      <q-item-label>{{ title }}</q-item-label>
+    <q-item-section>
+      <q-item-label class="essential-link__text">
+        {{ title }}
+      </q-item-label>
       <q-item-label
         caption
         class="essential-link__text"
@@ -33,17 +35,17 @@ export interface EssentialLinkProps {
   caption?: string;
   link?: string;
   icon?: string;
-};
+}
 
 withDefaults(defineProps<EssentialLinkProps>(), {
   caption: '',
   link: '#',
-  icon: '',
-});
+  icon: ''
+})
 </script>
 
 <style>
-  .essential-link__text {
-    color: #b8bcc2;
-  }
+.essential-link__text {
+  color: #757575;
+}
 </style>

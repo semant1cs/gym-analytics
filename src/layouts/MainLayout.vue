@@ -26,7 +26,7 @@
         <q-item-label
           header
           class="q-toolbar__title"
-          style="color: white; padding: 16px"
+          style="padding: 16px"
         >
           Панель управления
         </q-item-label>
