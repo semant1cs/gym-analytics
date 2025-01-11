@@ -22,7 +22,7 @@ const routes: RouteRecordRaw[] = [
     children: [{ path: '', component: () => import('pages/StatsPage.vue') }],
   },
   {
-    path: '/videos',
+    path: '/admin/videos',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/VideosPage.vue') }],
   },
