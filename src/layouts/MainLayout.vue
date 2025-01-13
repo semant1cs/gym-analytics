@@ -55,7 +55,7 @@ const linksList: EssentialLinkProps[] = [
     title: 'Панель',
     caption: 'Главная страница',
     icon: 'home',
-    link: '/admin/',
+    link: '/admin',
   },
   {
     title: 'Видео',

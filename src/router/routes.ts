@@ -1,34 +1,40 @@
+import LoginPage from 'pages/LoginPage.vue'
+import MainLayout from 'layouts/MainLayout.vue';
 import type { RouteRecordRaw } from 'vue-router';
+import SchedulePage from 'src/pages/SchedulePage.vue';
+import StatsPage from 'src/pages/StatsPage.vue';
+import VideosPage from 'pages/VideosPage.vue';
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
-  },
-  {
     path: '/admin',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/MainPage.vue') }],
+    component: MainLayout,
+    beforeEnter: (to, from, next) => {
+      const token = localStorage.getItem('token')
+      if (token === null) {
+        next({path: '/login'})
+      }
+      next()
+    },
+    children: [
+      {
+        path: 'videos',
+        component: VideosPage
+      },
+      {
+        path: 'schedule',
+        component: SchedulePage
+      },
+      {
+        path: 'stats/videos',
+        component: StatsPage
+      }
+    ]
   },
   {
-    path: '/schedule',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/SchedulePage.vue') }],
+    path: '/login',
+    component: LoginPage
   },
-  {
-    path: '/stats',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/StatsPage.vue') }],
-  },
-  {
-    path: '/videos',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/VideosPage.vue') }],
-  },
-
-  // Always leave this as last one,
-  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue'),

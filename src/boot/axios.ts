@@ -14,7 +14,8 @@ declare module 'vue' {
 // good idea to move this instance creation inside of the
 // "export default () => {}" function below (which runs individually
 // for each client)
-const api = axios.create({ baseURL: 'https://api.example.com' });
+const api = axios.create({ baseURL: 'http://localhost:8083/api/v1' }
+);
 
 export default defineBoot(({ app }) => {
   // for use inside Vue files (Options API) through this.$axios and this.$api
@@ -27,5 +28,8 @@ export default defineBoot(({ app }) => {
   // ^ ^ ^ this will allow you to use this.$api (for Vue Options API form)
   //       so you can easily perform requests against your app's API
 });
+api.defaults.withCredentials = false
+api.defaults.headers["Accept"] = "application/json"
+api.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded"
 
 export { api };
